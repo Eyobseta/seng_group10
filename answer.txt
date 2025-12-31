@@ -1,0 +1,82 @@
+Answers
+
+1. What command initializes a new Git repository?
+git init
+
+2. How do you clone an existing repository from GitHub?
+git clone https://github.com/username/repository.git
+
+3. How do you check the remote URL of your repository?
+git remote -v
+
+4. How do you check the current status of files in your repository?
+git status
+
+5. How do you stage a single file for commit?
+git add filename.ext
+
+6. How do you stage all modified files at once?
+git add . or git add --all
+
+7. What command is used to commit staged changes with a message?
+git commit -m "Your commit message"
+
+8. Which command shows the differences between unstaged changes
+and the last commit?
+git diff
+
+9. How do you see the differences for files that are already staged for
+commit?
+git diff --staged or git diff --cached
+
+10. Which command displays the commit history?
+git log
+
+11. How do you show commit history in one line per commit?
+git log --oneline
+
+12. How do you list all local branches?
+git branch
+
+13. How do you create a new branch?
+git branch branch-name
+
+14. How do you switch to an existing branch?
+git checkout branch-name or git switch branch-name
+
+15. How can you create a new branch and switch to it at the same
+time?
+git checkout -b new-branch-name or git switch -c new-branch-name
+
+16. How do you merge a branch into your current branch?
+git merge branch-to-merge
+
+
+17. What happens if there are conflicting changes during a merge?
+Git pauses the merge, marks conflicting files with conflict markers (<<<<<<<
+, =======, >>>>>>>), and requires manual resolution before completing the
+merge.
+
+18. What command is used to pull changes from the remote repository?
+git pull
+
+19. What command is used to push your local commits to the remote
+repository?
+git push
+
+20. What should you do if git pull says ”Your local changes would be
+overwritten by merge”?
+Either:
+• Stash changes: git stash, then git pull, then git stash pop
+• Commit changes first: git commit -m "Save work", then git pull
+• Discard changes (if not needed): git checkout -- ., then git pull
+
+21. What is a Git conflict?
+A Git conflict occurs when the same part of a file has been modified differently
+in two separate branches, and Git cannot automatically determine which
+version to keep.
+
+22. When does a conflict occur?
+Conflicts occur during: git merge, git rebase, git pull, or git cherry-pick
+when the same lines in a file have been changed in incompatible ways between
+branches or commits.
